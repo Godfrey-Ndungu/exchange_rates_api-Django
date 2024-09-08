@@ -1,0 +1,29 @@
+[run]
+source = .
+branch = False
+timid = True
+
+omit =
+    */venv/*
+    */manage.py
+    */settings.py
+    */development.py
+    */storage_backends.py
+    */sphinx_build.py
+    */wsgi.py
+    */utils.py
+    */migrations/*
+    */tests/*
+    */__init__.py
+    */asgi.py
+    */tests.py
+    */test.py
+
+[report]
+show_missing = False
+include = *.py
+exclude_lines =
+    pragma: no cover
+    def __str__
+    def __repr__
+    if settings.DEBUG:
