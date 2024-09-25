@@ -2,3 +2,4 @@ Django==5.1.1
 python-decouple==3.8
 flake8==7.1.1
 black==24.8.0
+django-unfold==0.39.0
