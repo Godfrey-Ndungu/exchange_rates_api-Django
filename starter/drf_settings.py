@@ -31,4 +31,14 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100,
     'UNICODE_JSON': True,  # Allow Unicode in JSON responses
     'COMPACT_JSON': True,  # Compact JSON format (no extra spacing)
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Starter',
+    'DESCRIPTION': 'DRF Starter',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_DIST': 'SIDECAR',
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
 }
