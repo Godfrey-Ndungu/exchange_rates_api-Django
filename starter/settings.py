@@ -11,6 +11,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    # unfold admin begin
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
+    "unfold.contrib.import_export",
+    "unfold.contrib.guardian",
+    "unfold.contrib.simple_history",
+    # admin end 
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
