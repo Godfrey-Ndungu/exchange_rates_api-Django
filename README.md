@@ -54,3 +54,7 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
 class GroupAdmin(BaseGroupAdmin, ModelAdmin):
     pass
 ```
+
+## Dynamic Model Registration
+
+The project dynamically loads and registers all models from all installed apps using Unfold's `ModelAdmin`. No manual registration is required for each model.
