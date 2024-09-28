@@ -58,3 +58,8 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 ## Dynamic Model Registration
 
 The project dynamically loads and registers all models from all installed apps using Unfold's `ModelAdmin`. No manual registration is required for each model.
+
+# Django Application Metrics
+
+This Django application is configured to export its statistics. 
+metrics are accessible at `http://127.0.0.1:8000/metrics`.
