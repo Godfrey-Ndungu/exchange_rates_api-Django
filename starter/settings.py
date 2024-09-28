@@ -20,6 +20,18 @@ INSTALLED_APPS = [
     "unfold.contrib.guardian",
     "unfold.contrib.simple_history",
     # admin end 
+    # Health
+    'health_check',                            
+    'health_check.db',                         
+    'health_check.cache',
+    'health_check.storage',
+    'health_check.contrib.migrations',
+    # 'health_check.contrib.celery',              # requires celery
+    # 'health_check.contrib.celery_ping',         # requires celery
+    # 'health_check.contrib.s3boto3_storage',     # requires boto3 and S3BotoStorage backend
+    # 'health_check.contrib.rabbitmq',            # requires RabbitMQ broker
+    # 'health_check.contrib.redis',               
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
