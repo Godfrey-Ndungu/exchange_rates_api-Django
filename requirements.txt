@@ -5,3 +5,8 @@ black==24.8.0
 djangorestframework==3.15.2
 Markdown==3.7
 django-filter==24.3
+django-unfold==0.39.0
+drf-spectacular==0.27.2
+drf-spectacular-sidecar==2024.7.1
+django-prometheus==2.3.1
+django-health-check==3.18.3
