@@ -8,6 +8,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('django_prometheus.urls')),
+    path('health', include('health_check.urls')),
     path("admin/", admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
