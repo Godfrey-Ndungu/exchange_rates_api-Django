@@ -16,4 +16,5 @@ urlpatterns = [
         url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(
         url_name='schema'), name='redoc'),
+    path(r'^docs/', include('sphinxdoc.urls')),
 ]

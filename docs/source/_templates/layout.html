@@ -1,0 +1,39 @@
+{% extends "!layout.html" %}
+  {% block footer %} {{ super() }}
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background:#EE3877;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #2E3047;
+    }
+    .wy-nav-side .caption-text{
+      color:rgb(255, 255, 255);
+    }
+
+    .wy-nav-side a{
+      color:white;
+      font-size: medium;
+      font-weight: 700;
+    }
+    .highlight {background-color: #E5EDD5 !important;
+    }
+
+    strong { color: #850505 !important; font-style: italic !important ;text-decoration:underline !important;};
+    /* Ensure sub-menus stay open when links are clicked */
+    .sphinxsidebar ul ul {
+        display: block !important;
+    }
+    .reference .internal{
+      display: none !important;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    em { color :Black ! important;font-weight:700 !important;text-align: center !important; }
+    cite { color : black ! important; font-weight:700 !important;}
+  </style>
+{% endblock %}
