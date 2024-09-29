@@ -78,3 +78,24 @@ Visit this endpoint to see the current health status of the project. It will ret
 {
   "status": "ok"
 }
+```
+
+## Sphinx Documentation for Django Project
+
+This project uses **Sphinx** to generate and maintain documentation. Follow the steps below to edit the documentation and generate the HTML output.
+
+## Editing Documentation
+
+1. Navigate to the `docs/` folder in the project.
+2. Inside the `docs/source/` folder, you will find the reStructuredText (`.rst`) files which contain the structure and content of the documentation.
+3. Edit or add content to the relevant `.rst` files as needed.
+   - For example, you can modify `index.rst` to update the main page or create new `.rst` files to add new sections to the documentation.
+
+## Generating HTML Documentation
+
+Once you've made changes to the documentation, you can generate the HTML output by running the following command:
+
+```bash
+cd docs
+make html
+```
