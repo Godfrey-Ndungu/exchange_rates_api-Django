@@ -63,3 +63,18 @@ The project dynamically loads and registers all models from all installed apps u
 
 This Django application is configured to export its statistics. 
 metrics are accessible at `http://127.0.0.1:8000/metrics`.
+
+# Django Application Health Checks
+
+This Django application includes health check endpoints to monitor its status. You can view the application's health by accessing the following URL:
+
+## Health Check URL
+- **Endpoint:** `/health`
+
+Visit this endpoint to see the current health status of the project. It will return a response indicating whether the application is operational.
+
+## Example Response
+```json
+{
+  "status": "ok"
+}
