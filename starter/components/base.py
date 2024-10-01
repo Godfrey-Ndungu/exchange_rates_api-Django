@@ -1,11 +1,7 @@
 
 from pathlib import Path
-from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = config("DJANGO_SECRET_KEY")
-DEBUG = True
-ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # unfold admin begin
