@@ -10,7 +10,8 @@ include(
     'components/secrets.py',
     'components/drf_settings.py',
 )
-
+DEBUG = False
+ALLOWED_HOSTS =['*']
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -58,3 +59,13 @@ LOGGING = {
 
 # Ensure the logs folder exists
 os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)
+
+
+
+# Set HTTP Strict Transport Security (HSTS)
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
+SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
