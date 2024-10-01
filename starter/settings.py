@@ -7,6 +7,8 @@ from split_settings.tools import include
 
 include(
     'components/base.py',
+    'components/secrets.py',
+    'components/drf_settings.py',
 )
 
 BASE_DIR = Path(__file__).resolve().parent.parent
