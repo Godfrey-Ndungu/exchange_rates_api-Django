@@ -1,5 +1,25 @@
-# django-rest-cookiecutter
 
+# django-rest-cookiecutter
+### Features
+
+This Django project includes several integrated features that enhance functionality, monitoring, and configuration flexibility.
+
+### 1. Unfold Admin
+
+**Feature**: Auto-add models to the Django admin using Unfold Admin for an enhanced UI and extra tools.
+
+- Provides improved filters, forms, and inline views.
+- Adds import/export functionality for models automatically.
+
+### 2. Prometheus Metrics
+### 3. Docker Support
+### 4. DRF (Django REST Framework)
+### 5. Sphinx Docs with Sidecar
+### 6. Logging
+### 7. Split Settings
+### 8. Python Decouple
+
+---
 # Admin
 
 This project integrates the **Unfold** admin interface to enhance the admin experience. The following instructions explain how to properly set up  Django admin by extending the custom `ModelAdmin` provided by Unfold.
@@ -99,3 +119,32 @@ Once you've made changes to the documentation, you can generate the HTML output 
 cd docs
 make html
 ```
+
+# Django Abstract Models: Timestamped & Non-Deletable
+
+This project includes two reusable abstract models designed for managing time-based data and handling record deletions securely. Both models are ordered by `id` by default and can be easily extended to fit your needs.
+
+## 1. TimeStampedModel
+
+### Description:
+The `TimeStampedModel` provides automatic tracking of record creation and updates. It includes two fields:
+- **created_at**: Automatically stores the date and time when the object is first created.
+- **updated_at**: Automatically updates every time the object is modified.
+
+### Usage:
+Inherit from `TimeStampedModel` in any model where you want to track the creation and modification times of your records. These fields are added automatically and require no additional configuration.
+
+## 3. NonDeletableModel
+
+### Description:
+The `NonDeletableModel` provides a mechanism to prevent hard deletion of records from the database. Instead of allowing direct deletion, it supports "soft deletion" by marking records as deleted via a `deleted_at` field, and provides methods for restoring soft-deleted records.
+
+### Features:
+- **soft_delete()**: Marks the object as deleted by setting the `deleted_at` timestamp.
+- **restore()**: Restores the object by removing the `deleted_at` timestamp.
+- **is_deleted**: Property that checks whether the object has been soft-deleted.
+- **Prevents hard deletion**: Direct use of `.delete()` raises an exception, ensuring that data is not permanently deleted.
+
+### Usage:
+Inherit from `NonDeletableModel` in any model where you want to implement soft deletion. This can be useful in cases where data integrity is important, and you want to avoid accidental loss of records.
+ n
