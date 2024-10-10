@@ -37,13 +37,15 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "drf_spectacular_sidecar",
 
+    "domain",
+
     "django_prometheus",
 
 ]
 
 MIDDLEWARE = [
     "django_prometheus.middleware.PrometheusBeforeMiddleware",
-    "django.middleware.security.SecurityMiddleware",
+    # "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",

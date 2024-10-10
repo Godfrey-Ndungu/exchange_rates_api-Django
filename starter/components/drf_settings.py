@@ -34,9 +34,9 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Starter',
-    'DESCRIPTION': 'DRF Starter',
-    'VERSION': '1.0.0',
+    'TITLE': 'Exchange Rates',
+    'DESCRIPTION': 'Bank Exchange Rates For KSH',
+    'VERSION': '0.1.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SWAGGER_UI_DIST': 'SIDECAR',
     'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
