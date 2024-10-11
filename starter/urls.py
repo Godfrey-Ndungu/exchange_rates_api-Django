@@ -9,6 +9,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('django_prometheus.urls')),
+    path('domain/', include('domain.urls')),
     path('health', include('health_check.urls')),
     path("admin/", admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
