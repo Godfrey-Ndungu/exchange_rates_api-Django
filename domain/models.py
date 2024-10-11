@@ -14,21 +14,22 @@ TYPE_CHOICES = [
 
 class Bank(TimeStampedModel):
     logo = models.ImageField(upload_to='domain/bank/bank_logos/')
-    name = models.CharField(max_length=255)
-    buy_ling = models.CharField(max_length=255, blank=True, null=True)
+    name = models.CharField(max_length=255, unique=True)
+    buy_link = models.CharField(max_length=255, blank=True, null=True)
     sell_link = models.CharField(max_length=255, blank=True, null=True)
     last_checked = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return self.bank_name
+        return self.name
 
 
 class Currency(TimeStampedModel):
     country_flag = models.ImageField(
         upload_to='domain/bank/country_flag/', blank=True, null=True)
-    name = models.CharField(max_length=255)
-    country = models.CharField(max_length=255, help_text='Country In Capital')
-    short_name = models.CharField(max_length=3,
+    name = models.CharField(max_length=255, unique=True)
+    country = models.CharField(max_length=255,
+                               help_text='Country In Capital', unique=True)
+    short_name = models.CharField(max_length=3, unique=True,
                                   help_text="Currency shorthand in UPPERCASE")
 
     def __str__(self):
@@ -42,7 +43,7 @@ class AggregatorLog(TimeStampedModel):
     status = models.CharField(max_length=7, choices=STATUS_CHOICES)
 
     def __str__(self):
-        return f'{self.bank.bank_name} - {self.type} - {self.status}'
+        return f'{self.bank.name} - {self.type} - {self.status}'
 
 
 class Record(TimeStampedModel):
@@ -57,4 +58,4 @@ class Record(TimeStampedModel):
                                 decimal_places=2)
 
     def __str__(self):
-        return f'{self.bank.bank_name} - {self.currency.short_name} - {self.type}' # noqa
+        return f'{self.bank.name} - {self.currency.short_name} - {self.type}' # noqa
