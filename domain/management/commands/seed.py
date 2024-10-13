@@ -13,8 +13,8 @@ class Command(BaseCommand):
     help = 'Generate sample data for banks, currencies, and records'
 
     def handle(self, *args, **kwargs):
-        # self.generate_banks(10)
-        # self.generate_currencies(10)
+        self.generate_banks(10)
+        self.generate_currencies(10)
         self.generate_records(1000)
         self.stdout.write(self.style.SUCCESS(
             'Successfully generated sample data'))
