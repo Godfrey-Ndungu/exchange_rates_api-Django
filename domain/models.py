@@ -15,8 +15,7 @@ TYPE_CHOICES = [
 class Bank(TimeStampedModel):
     logo = models.ImageField(upload_to='domain/bank/bank_logos/')
     name = models.CharField(max_length=255, unique=True)
-    buy_link = models.CharField(max_length=255, blank=True, null=True)
-    sell_link = models.CharField(max_length=255, blank=True, null=True)
+    forex_link = models.CharField(max_length=255, blank=True, null=True)
     last_checked = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
