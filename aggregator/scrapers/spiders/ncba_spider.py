@@ -13,5 +13,4 @@ class NCBASpider(scrapy.Spider):
                 "buy": row.css("td:nth-child(3)::text").get(),
                 "sell": row.css("td:nth-child(4)::text").get(),
             }
-            print(data)
             yield data
