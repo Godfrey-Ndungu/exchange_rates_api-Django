@@ -65,7 +65,10 @@ class Command(BaseCommand):
             {"country": "India", "currency": "Indian Rupee", "code": "INR"},
             {"country": "Rwanda", "currency": "Rwandan Franc", "code": "RWF"},
             {"country": "Burundi", "currency": "Burundian Franc", "code": "BIF"},# noqa
-            {"country": "South Sudan", "currency": "South Sudanese Pound", "code": "SSP"}# noqa
+            {"country": "South Sudan", "currency": "South Sudanese Pound", "code": "SSP"},# noqa
+            {"country": "Burundi", "currency": "Burundi Franc", "code": "BIF"},  # noqa
+            {"country": "South Sudan", "currency": "South Sudanese Pound", "code": "SSP"},  # noqa
+            {"country": "China", "currency": "Chinese Yuan", "code": "CNY"}  # noqa
         ]
 
         for currency_data in currencies:

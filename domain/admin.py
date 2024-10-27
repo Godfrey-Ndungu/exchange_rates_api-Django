@@ -24,9 +24,9 @@ class CurrencyAdmin(ModelAdmin):
 
 @admin.register(AggregatorLog)
 class AggregatorLogAdmin(ModelAdmin):
-    list_display = ('bank', 'type', 'status', 'created_at')
-    search_fields = ('bank__name', 'type', 'status')
-    list_filter = ('status', 'type', 'created_at')
+    list_display = ('bank', 'status', 'created_at')
+    search_fields = ('bank__name', 'status')
+    list_filter = ('status', 'created_at')
 
 
 @admin.register(Record)
