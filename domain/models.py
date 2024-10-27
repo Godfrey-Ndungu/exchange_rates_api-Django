@@ -38,7 +38,6 @@ class Currency(TimeStampedModel):
 class AggregatorLog(TimeStampedModel):
     bank = models.ForeignKey(Bank, on_delete=models.CASCADE,
                              related_name='logs')
-    type = models.CharField(max_length=4, choices=TYPE_CHOICES)
     status = models.CharField(max_length=7, choices=STATUS_CHOICES)
 
     def __str__(self):

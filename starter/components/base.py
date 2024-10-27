@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     "django_prometheus",
     "django_celery_beat",
+    "django_celery_results",
 ]
 
 MIDDLEWARE = [
@@ -109,3 +110,5 @@ STATIC_URL = "static/"
 CORS_ORIGIN_ALLOW_ALL = True
 CELERY_BROKER_URL = 'redis://localhost:6379/1'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'

@@ -147,4 +147,6 @@ The `NonDeletableModel` provides a mechanism to prevent hard deletion of records
 
 ### Usage:
 Inherit from `NonDeletableModel` in any model where you want to implement soft deletion. This can be useful in cases where data integrity is important, and you want to avoid accidental loss of records.
- n
+
+celery -A starter beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery -A starter worker -l info
