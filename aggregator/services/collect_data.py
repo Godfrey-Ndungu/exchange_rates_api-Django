@@ -60,7 +60,6 @@ class CollectData:
             spider_module = importlib.import_module(self.module_name)
             spider_class = getattr(spider_module, self.class_name)
 
-            # Set up the Scrapy CrawlerProcess with project settings
             process = CrawlerProcess(get_project_settings())
             # Run the spider by passing the class, not an instance
             process.crawl(spider_class)

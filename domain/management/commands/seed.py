@@ -16,6 +16,11 @@ class Command(BaseCommand):
                 "forex_link": "https://ke.ncbagroup.com/forex-rates/",
                 "logo": "https://x.com/NCBABankKenya/photo",
             },
+             {
+                "name": "EQUITY",
+                "forex_link": "https://equitygroupholdings.com/ke/",
+                "logo": "https://equitygroupholdings.com/ke/ke/Content/assets/img/equity-bank-logo.png",
+            },
         ]
 
         for bank_data in banks_data:
