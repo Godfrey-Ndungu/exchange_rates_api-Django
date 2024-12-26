@@ -41,7 +41,7 @@ class AggregatorLog(TimeStampedModel):
     status = models.CharField(max_length=7, choices=STATUS_CHOICES)
 
     def __str__(self):
-        return f'{self.bank.name} - {self.type} - {self.status}'
+        return f'{self.bank.name}-{self.status}'
 
 
 class Record(TimeStampedModel):
