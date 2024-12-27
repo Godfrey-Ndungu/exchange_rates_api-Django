@@ -10,7 +10,8 @@ class Command(BaseCommand):
         collector1 = CollectData("NCBA")
         collector2 = CollectData("EQUITY")
         collector3 = CollectData("IM")
-        collector3()
+        collector4 = CollectData("Africa")
+        collector4()
 
         self.stdout.write(self.style.SUCCESS(
             "."))
