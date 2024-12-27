@@ -21,6 +21,11 @@ class Command(BaseCommand):
                 "forex_link": "https://equitygroupholdings.com/ke/",
                 "logo": "https://equitygroupholdings.com/ke/ke/Content/assets/img/equity-bank-logo.png",
             },
+             {
+                "name": "IM",
+                "forex_link": "https://www.imbankgroup.com/ke/foreign-exchange/",
+                "logo": "https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2024/01/Blue-Logo.png",
+            },
         ]
 
         for bank_data in banks_data:
