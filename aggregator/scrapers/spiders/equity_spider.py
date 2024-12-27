@@ -23,5 +23,4 @@ class EquitySpider(scrapy.Spider):
             EquitySpider.scraped_data.append(data)
 
     def closed(self, reason):
-        print(EquitySpider.scraped_data)
         return EquitySpider.scraped_data

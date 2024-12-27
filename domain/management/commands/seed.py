@@ -26,6 +26,11 @@ class Command(BaseCommand):
                 "forex_link": "https://www.imbankgroup.com/ke/foreign-exchange/",
                 "logo": "https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2024/01/Blue-Logo.png",
             },
+             {
+                "name": "Africa",
+                "forex_link": "https://boakenya.com/treasury/daily-exchange-rates/",
+                "logo": "https://boakenya.com/wp-content/uploads/2023/12/40years-BOA-light-BGdigitalWeb-e1702972149907.png",
+            },
         ]
 
         for bank_data in banks_data:
@@ -78,7 +83,8 @@ class Command(BaseCommand):
             {"country": "South Sudan", "currency": "South Sudanese Pound", "code": "SSP"},# noqa
             {"country": "Burundi", "currency": "Burundi Franc", "code": "BIF"},  # noqa
             {"country": "South Sudan", "currency": "South Sudanese Pound", "code": "SSP"},  # noqa
-            {"country": "China", "currency": "Chinese Yuan", "code": "CNY"}  # noqa
+            {"country": "China", "currency": "Chinese Yuan", "code": "CNY"},  # noqa
+            {"country": "Offshore China", "currency": "Chinese Yuan Renminbi", "code": "CNH"}  # noqa
         ]
 
         for currency_data in currencies:
