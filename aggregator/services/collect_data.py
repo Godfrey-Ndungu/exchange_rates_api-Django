@@ -63,7 +63,7 @@ class CollectData:
             process = CrawlerProcess(get_project_settings())
             # Run the spider by passing the class, not an instance
             process.crawl(spider_class)
-            process.start()  # This will block until the crawling is finished
+            process.start()
 
             return getattr(spider_class, "scraped_data", [])
         except ModuleNotFoundError:
