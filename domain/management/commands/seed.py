@@ -31,6 +31,11 @@ class Command(BaseCommand):
                 "forex_link": "https://boakenya.com/treasury/daily-exchange-rates/",
                 "logo": "https://boakenya.com/wp-content/uploads/2023/12/40years-BOA-light-BGdigitalWeb-e1702972149907.png",
             },
+             {
+                "name": "Prime",
+                "forex_link": "https://www.primebank.co.ke/todays-exchange-rates/",
+                "logo": "https://www.primebank.co.ke/wp-content/uploads/2019/05/Prime-Bank-logo-main.png",
+            },
         ]
 
         for bank_data in banks_data:
